@@ -1,0 +1,130 @@
+.container{
+    margin: auto;
+    border: 1px solid black;
+    width: 1000px;
+    background-color: white;  
+}
+.header{
+    border-top: 5px solid #3A66F7;
+}
+.header #icn img{
+    position: absolute;
+    width: 50px;
+    margin-top: -50px;
+    border: 0px;
+}
+.nav{
+    background-color: #3A66F7;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    height: 22px;
+    
+}
+.nav #cnt{
+    display: block;
+    float: right;
+}
+
+.nav button{
+    margin-left: -1px;
+    margin-right: 2px;
+}
+.line{
+    border-right: 2px solid #F9F7F7;
+    margin-right: 4px;
+    height: 1px;
+}
+.nav #cnt a{
+    text-decoration: none;
+    color:white;
+}
+.nav #cnt a:hover{
+    text-decoration: none;
+    background-color: #F9F7F7;
+    color:#111111;
+}
+.sidebar{
+    clear: right;
+    float:left;
+    margin-top: 5px;
+    margin-right: 2px;
+    width: 196px;
+    background-color: #DBD7D7;
+    min-height: 300px;
+}
+.sidebar dd,dl,dt{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display:block;
+    font-weight: bold;
+    margin-left: 0px;
+
+}
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    color:black;
+}
+.sidebar dd{
+    padding-left: 25px;
+    line-height: 30px;
+}
+.sidebar dt{
+    background-color: #FD5656;
+    color:white;
+    text-align: center;
+}
+.sidebar a:hover{
+
+    color:white;
+}
+.sidebar dd:hover{
+    background-color:  #3A66F7;
+    color:white;
+}
+.content{
+    float:right;
+    margin-top: 5px;
+    margin-left: 2px;
+    width:796px;
+    min-height: 50px;
+}
+
+.box{
+    margin: 5px 15px 20px 15px;
+    float:left;
+    width: 180px;
+    text-align: center;
+}
+.box a{
+    text-decoration: none;
+}
+.box a:hover{
+    display: block;
+    border: 2px solid blueviolet;
+    margin-bottom: 2px;
+}
+.box img{
+    width: 120px;
+    height: 150px;
+}
+.name{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 2px;
+    color: #FE4E4E;
+}
+.price{
+    font-weight: italic;
+    color: #2C33FB;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+.footer{
+    clear: both;
+    background-color: #3A66F7;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
