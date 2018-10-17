@@ -1,0 +1,56 @@
+.main{
+    background:#ffffcc;
+    width:700px;
+    height:350px;
+    border:1px solid black;
+    margin: auto;
+}
+.main h1{
+    background:tomato;
+    padding: 5px;
+    text-align: center;
+}
+.main #trai{
+    float:left;
+    width:200px;
+    min-height:220px;
+    padding:10px;
+
+
+}
+
+.main input{
+    margin-bottom: 10px;
+}
+.main #phai{
+    float:right;
+    width: 60%;
+    height: 220px; 
+    padding:10px;
+
+
+}
+.main #phai button{
+    border:none;
+    width:80%;
+   height: 50px;
+    margin:3px;
+}
+.main #phai button:hover{
+    border: 5px solid #66ccff;
+}
+.clear{
+    clear:both;
+}
+/* Log in - sign up */
+
+.topbar a{
+    float: right;
+    text-decoration: none;
+    color:blue;
+}
+.topbar #signup{
+    border-left: 1px solid black;
+    margin-left: 5px;
+    padding-left: 5px;
+}

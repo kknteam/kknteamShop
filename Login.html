@@ -2,7 +2,11 @@
     <head>
         <title>Electronic Supply Home Page</title>
         <meta charset="UTF-8">
+        <!-- CSS -->
         <link rel="stylesheet" href="css/style_Main.css">
+        <link rel="stylesheet" href="css/style_Login.css">
+        <!-- JS -->
+        <script src="js/JS_Login.js"></script>
         <!-- W3S CSS icon lib -->
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -83,71 +87,23 @@
                 </dl>
             </div>
 
-            <!-- PRODUCT LIST -->
+            <!-- CONTENT -->
             <div class="content">                
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/HP01.jpg" alt="HeadPhone">
-                        <div class="name">Headphone Hyper X</div>
-                        <div class="price">Price: 350 000</div>
-                    </a>
+                <div class="main">
+                    <h1>LOG IN</h1>
+                    <div id="trai">
+                        <font size=3px>Username</font><br>
+                        <input type="text" id="username" placeholder="Username..."><br>
+                        <font size=3px>Password</font><br>
+                        <input type="password" id="password" placeholder="Pasword..."><br>
+                        <p size="2.5px">New here?<a href="#SignUp.html"> Sign up</a></p>                       
+                    </div>
+                    <div id="phai">                   
+                        <button type="button" style="background: #FE9114; color: white" onclick="valid()">Log in</button><br>
+                        <button style="background: #0033FF; color: white " onclick="alert('This button isnt available at the moment.')">Facebook</button><br>
+                        <button style="background: #FF0033; color: white" onclick="alert('This button isnt available at the moment.')">Google</button><br>                   
+                    </div>
                 </div>
-
-                <div class="box">
-                        <a href="#">
-                        <img src="img_product/KB_Glorious GMMK.jpg" alt="Keyboard">
-                        <div class="name">Gloriou GMMK</div>
-                        <div class="price">Price: 850 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Lap01.jpg" alt="Laptop">
-                        <div class="name">ASUS F555L Laptop</div>
-                        <div class="price">Price: 14 350 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Mouse01.jpg" alt="Mouse">
-                        <div class="name">GM Razer</div>
-                        <div class="price">Price: 1 550 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/PC02.jpg" alt="PC">
-                        <div class="name">Set gaming PC</div>
-                        <div class="price">Price: 14 550 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Moni01.jpg" alt="Monitor">
-                        <div class="name">Nice Screen</div>
-                        <div class="price">Price: 6 550 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                        <a href="#">
-                            <img src="img_product/Mouse02.jpg" alt="Mouse">
-                            <div class="name">Gaming mouse</div>
-                            <div class="price">Price: 550 000</div>
-                        </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/KB01.jpg" alt="KB">
-                        <div class="name">Gaming Keyboard</div>
-                        <div class="price">Price: 750 000</div>
-                    </a>
-                </div>
-
             </div>
             <div class="footer">Khang Ha</div>
         </div>
