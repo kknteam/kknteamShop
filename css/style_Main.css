@@ -63,6 +63,10 @@
     background-color: #DBD7D7;
     color: #2C33FB;
 }
+a.active{
+    color:white;
+    background-color: #0C1C83;
+}
 .sidebar{
     float:left;
     margin-top: 5px;
