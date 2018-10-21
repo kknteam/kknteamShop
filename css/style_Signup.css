@@ -36,4 +36,10 @@
 .input-group a{
     text-decoration: none;
 }
+.report{
+    font-size: 15px;
+    color:  #ff0000;
+    margin-left: 25px;
+    padding:5px;
+}
 
