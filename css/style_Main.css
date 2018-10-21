@@ -18,8 +18,9 @@
     text-align: center;
     font-weight: bold;
     color:white;
-    height: 22px;
-    
+    /* hidden will make div card extend whenever elemnt filled in */
+    overflow: hidden; 
+
 }
 .nav #cnt{
     display: block;
@@ -30,10 +31,28 @@
     margin-left: -1px;
     margin-right: 2px;
 }
-.line{
-    border-right: 2px solid #F9F7F7;
-    margin-right: 4px;
-    height: 1px;
+
+/* NAVIGATE */
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav li{
+   float:left;
+    /* This will keep li element in one line */
+}
+.nav a{
+    display: block;
+    background-color: #3A66F7;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+.nav a:hover{
+    background-color: #DBD7D7;
+    color: #2C33FB;
 }
 .nav #cnt a{
     text-decoration: none;
@@ -41,11 +60,10 @@
 }
 .nav #cnt a:hover{
     text-decoration: none;
-    background-color: #F9F7F7;
-    color:#111111;
+    background-color: #DBD7D7;
+    color: #2C33FB;
 }
 .sidebar{
-    clear: right;
     float:left;
     margin-top: 5px;
     margin-right: 2px;
@@ -65,6 +83,10 @@
     display: block;
     text-decoration: none;
     color:black;
+}
+.sidebar dl{
+    padding: 0;
+    margin: 0;
 }
 .sidebar dd{
     padding-left: 25px;

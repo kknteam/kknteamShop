@@ -1,10 +1,9 @@
 .center{
-    overflow:hidden;
+    overflow: hidden;
     width: 300px;
-    height: 300px;;
     border: 1px solid black;
     margin: auto;
-    min-height: 450px;
+
 }
 .input-head{
     text-align: center;
@@ -12,24 +11,18 @@
     color: white;
     border-radius: 5px;
     border: 1px solid black;
-
-}
-.input-group{
-    line-height: 45px;
 }
 .input-group label{
-    display: block;
-    font-weight: bold;
+    display:block;
     text-align: left;
-
+    margin: 3px;
 }
 .input-group input{
-    display: block;
-    margin-bottom: 10px;
     width: 95%;
-    height: 25px;
+    height: 20px;
     border-radius: 5px;
     border: 1px solid grey;
+    margin-bottom: 5px;
 }
 .input-group button{
     width: 55%;
@@ -43,11 +36,4 @@
 .input-group a{
     text-decoration: none;
 }
-/* REPORT */
-.report{
-    color: tomato;
-    margin: 5px;
-}
-.report #inside{
-    font-weight: bold;
-}
+
