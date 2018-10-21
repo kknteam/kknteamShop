@@ -27,7 +27,7 @@ function valid(){
         errors.push(" There can't be space between characters in username. \n");
         check++;
     }
-    if(check=0)
+    if(check==0)
     {
         window.location.replace("index.html");
         alert("Welcome " + userName);
