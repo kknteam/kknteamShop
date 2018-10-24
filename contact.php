@@ -15,7 +15,7 @@
                 <img src="img/head_bar_01.png" width="1000px" height="60px" alt="blue bar">
                 <!-- HP icon -->
                 <div id="icn">
-                    <a href="index.html">
+                    <a href="index01.php">
                        <img src="img/icon_HomePage_02.png" alt="icon_HP">
                     </a>
                 </div>
@@ -24,11 +24,11 @@
             <!-- NAVIGATE -->
             <div class="nav">
                     <ul>
-                        <li><a href="index.html">HOME PAGE</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a class="active" href="contact.html">CONTACT</a></li>
-                        <li id="cnt"><a href="Login.html">Log in</a></li>
-                        <li id="cnt"><a href="Signup.html">Sign up</a></li>                   
+                        <li><a href="index01.php">HOME PAGE</a></li>
+                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a class="active" href="contact.php">CONTACT</a></li>
+                        <li id="cnt"><a href="Login.php">Log in</a></li>
+                        <li id="cnt"><a href="Signup.php">Sign up</a></li>                   
                     </ul>
 
             </div>

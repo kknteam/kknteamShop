@@ -36,10 +36,15 @@
 .input-group a{
     text-decoration: none;
 }
-.report{
-    font-size: 15px;
-    color:  #ff0000;
-    margin-left: 25px;
-    padding:5px;
+
+.error{
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
 }
 

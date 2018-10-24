@@ -4,6 +4,9 @@
     width: 1000px;
     background-color: white;  
 }
+.signin{
+    border: 1px solid white;
+}
 .header{
     border-top: 5px solid #3A66F7;
 }
@@ -18,9 +21,9 @@
     text-align: center;
     font-weight: bold;
     color:white;
-    /* hidden will make div card extend whenever elemnt filled in */
+    /* hidden will make div card extend whenever elemnt filled in 
     overflow: hidden; 
-
+*/
 }
 .nav #cnt{
     display: block;
