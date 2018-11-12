@@ -1,0 +1,24 @@
+		/* Drop down menu */
+		.dropdown{
+		    position: relative;
+		    display:inline-block;
+		}
+		.dropdown button{
+		    font-size:20px;
+		    text-align: center;
+		    margin-left:10px;
+		    font-family: 'Times new roman';
+		}
+		.dropdown-content{
+		    display:none;
+		    position:absolute;
+
+		    min-width: 130px;
+
+		    padding:5px;
+		    z-index:1;
+		}
+		.dropdown:hover .dropdown-content{
+		    display:block;
+		}
+		/*END DROP DOWN*/

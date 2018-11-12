@@ -4,17 +4,17 @@
         <title>Electronic Supply Home Page</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style_Main.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <!-- W3S CSS icon lib -->
- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body bgcolor="#CAC7C7">
-        <div class="signin">
-            <?php if(isset($_SESSION['username'])) : ?>
-                <p> Welcome <strong><?php echo $_SESSION['username']; ?></strong> | <a href="login.php?logout='1'">Log out</a> </p>
-            <?php endif ?>
-            
-        </div>
         <div class="container">
+
+            <?php if(isset($_SESSION['username'])) : ?>
+                <p class="signin"> Welcome <strong><?php echo $_SESSION['username']; ?></strong> | <a href="login.php?logout='1'">Log out</a> </p>
+            <?php endif ?>           
 
             <!-- HEAD -->
             <div class="header">
@@ -34,8 +34,11 @@
                         <li><a class="active" href="index01.php">HOME PAGE</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li id="cnt"><a href="Login.php">Log in</a></li>
-                        <li id="cnt"><a href="Signup.php">Sign up</a></li>                   
+                        
+                        <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numberCartItem.php");?></li>
+                        <li class="rgt"><a href="checkout.php"><i style="font-size:20px" class="fa">&#xf07a;</i></a></li>
+                        <li class="rgt"><a href="Login.php">Log in</a></li> 
+                        <li class="rgt"><a href="Signup.php">Sign up</a></li>                  
                     </ul>
 
             </div>
@@ -45,22 +48,34 @@
                 <dl>
                     <dt>Check out our product</dt>
                         <dd>
-                           <a href="#"> Laptop </a>
+                           <form action="itemSort.php?id=Lap" method="GET">
+                                <input type="hidden" name="item" value="Lap">
+                               <input type="submit" value="Laptop">
+                           </form>
                         </dd>
                         <dd>
-                            <a href="#"> Hardware </a>
+                           <form action="itemSort.php?id=HP" method="GET">
+                                <input type="hidden" name="item" value="HP">
+                               <input type="submit" value="HeadPhone">
+                           </form>
                         </dd>
                         <dd>
-                            <a href="#"> Headphone </a>
+                           <form action="itemSort.php?id=KB" method="GET">
+                                <input type="hidden" name="item" value="KB">
+                               <input type="submit" value="Keyboard">
+                           </form>                        
+                       </dd>
+                        <dd>
+                            <form action="itemSort.php?id=KB" method="GET">
+                                <input type="hidden" name="item" value="Mse">
+                               <input type="submit" value="Mouse">
+                           </form> 
                         </dd>
                         <dd>
-                            <a href="#"> Keyboard </a>
-                        </dd>
-                        <dd>
-                            <a href="#"> Mouse </a>
-                        </dd>
-                        <dd>
-                            <a href="#"> screen </a>
+                            <form action="itemSort.php?id=KB" method="GET">
+                                <input type="hidden" name="item" value="Moni">
+                               <input type="submit" value="Moniter">
+                           </form> 
                         </dd> 
                         <dd>
                             <a href="#"> TV </a>
@@ -91,73 +106,49 @@
                 </dl>
             </div>
 
+           
             <!-- PRODUCT LIST -->
-            <div class="content">                
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/HP01.jpg" alt="HeadPhone">
-                        <div class="name">Headphone Hyper X</div>
-                        <div class="price">Price: 350 000</div>
-                    </a>
-                </div>
+            <div class="content">  
+                                     
+                <?php
+                    $query = "SELECT * FROM product ORDER BY id ASC";
+                    $result = mysqli_query($db, $query);
+                        if(mysqli_num_rows($result) > 0)
+                        {
+                            while($row = mysqli_fetch_array($result))
+                            {
+                ?>
+                <!-- '{' -->
+                <a href="Info.php">
+                    <div class="box">
+                            <form method="post" action="index01.php?action=add&id=<?php echo $row["id"]; ?>">
+                                    <img src="img_product/<?php echo $row["img"];?>"/>
+                                    
+                                    <div class="name" ><?php echo $row["productname"]; ?></div>
 
-                <div class="box">
-                        <a href="#">
-                        <img src="img_product/KB_Glorious GMMK.jpg" alt="Keyboard">
-                        <div class="name">Gloriou GMMK</div>
-                        <div class="price">Price: 850 000</div>
-                    </a>
-                </div>
+                                    <div class="price" ><?php echo $row["price"]; ?>đ</div>
 
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Lap01.jpg" alt="Laptop">
-                        <div class="name">ASUS F555L Laptop</div>
-                        <div class="price">Price: 14 350 000</div>
-                    </a>
-                </div>
+                                    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>" />
 
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Mouse01.jpg" alt="Mouse">
-                        <div class="name">GM Razer</div>
-                        <div class="price">Price: 1 550 000</div>
-                    </a>
-                </div>
+                                    <input type="hidden" name="hidden_name" value="<?php echo $row["productname"]; ?>" />
 
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/PC02.jpg" alt="PC">
-                        <div class="name">Set gaming PC</div>
-                        <div class="price">Price: 14 550 000</div>
-                    </a>
-                </div>
+                                    <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/Moni01.jpg" alt="Monitor">
-                        <div class="name">Nice Screen</div>
-                        <div class="price">Price: 6 550 000</div>
-                    </a>
-                </div>
-
-                <div class="box">
-                        <a href="#">
-                            <img src="img_product/Mouse02.jpg" alt="Mouse">
-                            <div class="name">Gaming mouse</div>
-                            <div class="price">Price: 550 000</div>
-                        </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img_product/KB01.jpg" alt="KB">
-                        <div class="name">Gaming Keyboard</div>
-                        <div class="price">Price: 750 000</div>
-                    </a>
-                </div>
+                                    <input type="submit" name="shopping_cart" style="margin-top:5px;" class="sub" value="Add to Cart" />
+                            </form>
+                        </div>
+                </a>
+                      <!-- '}' -->
+                <?php
+                        }
+                    }
+                ?>
+      
+                
 
             </div>
             <div class="footer">Khang Ha</div>
         </div>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

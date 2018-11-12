@@ -6,10 +6,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/style_Main.css">
         <link rel="stylesheet" href="css/style_Signup.css">
-        <!-- JS -->
-        <script src="js/JS_Login.js"></script>
-        <!-- W3S CSS icon lib -->
-     	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body bgcolor="#CAC7C7">
@@ -37,28 +34,15 @@
                     <li><a href="contact.php">CONTACT</a></li>
                         <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numbercartItem.php");?></li>
                         <li class="rgt"><a href="checkout.php"><i style="font-size:20px" class="fa">&#xf07a;</i></a></li>
-                        <li class="rgt"><a class="active" href="Login.php">Log in</a></li> 
-                        <li class="rgt"><a href="Signup.php">Sign up</a></li>                                     
+                        <li class="rgt"><a href="Login.php">Log in</a></li> 
+                        <li class="rgt"><a href="Signup.php">Sign up</a></li>                                                    
                 </ul>
             </div>
 
             <!-- CONTENT -->
-            <div class="center">              
-                <div class="input-head">
-                    <h2>LOG IN</h2>
-                </div>
+            <div class="ctrProduct">              
 
-                <form method="post" action="Login.php">
-                    <div class="input-group">
-                        <?php include('subPage/error.php'); ?>
-                        <label for="">Username</label>
-                        <input type="text" name="username" placeholder="Username..." maxlength="20">
-                        <label for="">Password</label>
-                        <input type="password" name="password" placeholder="Pasword..." maxlength="20">
-                        <button type="submit" name="log_user">Sign in</button>
-                        <label>New here? <a href="Signup.php"> Sign up</a></label>                              
-                </div>
-                </form>
+                <h1>PRODUCT INFO</h1>
                 
 
             </div>
