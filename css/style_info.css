@@ -1,0 +1,20 @@
+.product-image-box
+{
+    float: left;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.slide_product_left img
+{
+    width: 150px;
+    height: 100px;
+}
+
+.product-price-box
+{
+    float: right;
+    border: 1px solid black;
+    width: 650px;
+    padding-left: 30px;
+}
