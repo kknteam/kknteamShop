@@ -77,31 +77,7 @@
                                <input type="submit" value="Moniter">
                            </form> 
                         </dd> 
-                        <dd>
-                            <a href="#"> TV </a>
-                        </dd>  
-                        <dd>
-                            <a href="#"> Phone </a>
-                        </dd>                                                  
-                    <dt>Electronic companies</dt>
-                    <dd>
-                        <a href="#"> Dell </a>
-                    </dd>
-                    <dd>
-                        <a href="#"> ASUS </a>
-                    </dd>
-                    <dd>
-                        <a href="#"> Apple </a>
-                    </dd>
-                    <dd>
-                        <a href="#"> Sony </a>
-                    </dd>
-                    <dd>
-                        <a href="#"> Panasonic </a>
-                    </dd>
-                    <dd>
-                        <a href="#"> Microsoft </a>
-                    </dd> 
+                    
 
                 </dl>
             </div>
