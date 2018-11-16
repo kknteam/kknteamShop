@@ -196,7 +196,7 @@
 				if($value["id"] == $_GET["id"])
 				{
 					$item = $_SESSION["cart"][$key];
-					$item['quantity'] = $item['quantity']+1;
+					$item['quantity'] = $item['quantity'] + 1;
 					$_SESSION["cart"][$key] = $item;
 				}
 			}
@@ -211,7 +211,7 @@
 			$listItem = mysqli_fetch_assoc($result); 
 		}
 	}
-
+	 
 
 	//LOG OUT
 	if(isset($_GET['logout']))

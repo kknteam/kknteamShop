@@ -38,7 +38,9 @@
                         <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numberCartItem.php");?></li>
                         <li class="rgt"><a href="checkout.php"><i style="font-size:20px" class="fa">&#xf07a;</i></a></li>
                         <li class="rgt"><a href="Login.php">Log in</a></li> 
-                        <li class="rgt"><a href="Signup.php">Sign up</a></li>                  
+                        <li class="rgt"><a href="Signup.php">Sign up</a></li>
+
+                                       
                     </ul>
 
             </div>
@@ -77,15 +79,15 @@
                                <input type="submit" value="Moniter">
                            </form> 
                         </dd> 
-                    
-
                 </dl>
             </div>
 
            
             <!-- PRODUCT LIST -->
             <div class="content">  
-                                     
+                <div class="dropdown">CART
+                    <div class="dropdown-content"><?php include("subPage/product.php"); ?>"</div>
+                </div>
                 <?php
                     $query = "SELECT * FROM product ORDER BY id ASC";
                     $result = mysqli_query($db, $query);

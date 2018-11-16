@@ -28,7 +28,7 @@
     overflow: hidden; 
 
 }
-.rgt{
+.nav .rgt{
     display: block;
     float: right;
 }
@@ -69,52 +69,49 @@ a.active{
 }
 
 /*SIDEBAR*/
-        /*SIDEBAR*/
 .sidebar{
-    width: 200px;
-    margin: 0px;
-    padding: 0px;
-    background: #FFF;
-    border-bottom: 2px solid #fff;
-    float: left;
-    margin-bottom: 10px;
-    font-weight: bold;
+    float:left;
+    margin-top: 5px;
+    margin-right: 2px;
+    width: 196px;
+    background-color: #DBD7D7;
+    min-height: 300px;
 }
-.sidebar dl dt{
-    background: #0C1C83;
-    color: white;
-    margin: 2px 2px 1px 2px;
-    padding: 6px 0px;
-    text-align: center;
+
+.sidebar dd,dl,dt{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display:block;
     font-weight: bold;
+    margin-left: 0px;
+
+}
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    color:black;
 }
 .sidebar dl{
-    margin:0px;
-    padding:0px;
+    padding: 0;
+    margin: 0;
 }
-.sidebar dl dd{
-    background: white;
-    border-bottom: 1px solid #3A66F7;
-    margin: 0px 2px;
-    padding: 0px;
+.sidebar dd{
+    padding-left: 25px;
+    line-height: 30px;
 }
-.sidebar dl dd a{
-    color: white;
-    font-weight: bold;
-    padding: 3px 22px;
-    display: block;
+.sidebar dt{
+    background-color: #FD5656;
+    color:white;
+    text-align: center;
 }
-.sidebar input[type="submit"]{
-    color: white;
-    width: 195px;
-    border: none;
-    background-color: #3A66F7;
+.sidebar a:hover{
+
+    color:white;
 }
-.sidebar dl dd input:hover{
-    background: #0C1C83;
-    color: white;
+.sidebar dd:hover{
+    background-color:  #3A66F7;
+    color:white;
 }
-/*content*/
 .content{
     float:right;
     margin-top: 5px;
@@ -231,6 +228,7 @@ a.active{
     border: 1px solid grey;
     padding: 10px;
     margin: 10px;
+    background-color: white;
 }
 /*Button style*/
 .sub{
