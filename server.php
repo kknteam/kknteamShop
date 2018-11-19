@@ -108,7 +108,7 @@
 			{
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "Loged in successfully";
-				header('location: index01.php');
+				header('location: index.php');
 			}
 			else //FAIL
 			{
@@ -166,7 +166,7 @@
 		{
 			echo '<script>
 					alert("You have to log in to use shopping cart");
-					window.location.replace("login.php");
+					window.location.replace("Login.php");
 					</script>';
 		}
 		
