@@ -51,7 +51,6 @@
 }
 /* PRODUCT PAGE */
 .cntProduct{
-    overflow: hidden;
     width: 100%;
     border: 1px solid black;
     padding: 20px;

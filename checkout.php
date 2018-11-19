@@ -66,7 +66,7 @@
                         <tr>
                             <td><b>Phone number:</b></td>
                                 <td>
-                                    <input type="tel" name="txtPhone" id="txtPhone" require>
+                                    <input type="text" name="txtPhone" id="txtPhone" require>
                                 </td>
                             </tr>
                         </tr>
@@ -82,7 +82,7 @@
                             <td colspan="2" align="right"><input type="submit" name="checkout" class="sub" value="Proceed to pay" ></td>
                         </tr>
                     </table>
-                    
+               </form>      
                     </fieldset>
                     
                <hr>
@@ -91,7 +91,7 @@
                         <legend >Your Shopping Cart</legend>
                         <?php include("subPage/product.php"); ?>
                     </fieldset>
-                </form> 
+
             </div>
 
             <div class="footer">Khang Ha</div>

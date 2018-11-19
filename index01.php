@@ -35,12 +35,10 @@
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
                         
-                        <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numberCartItem.php");?></li>
+                        <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numbercartItem.php");?></li>
                         <li class="rgt"><a href="checkout.php"><i style="font-size:20px" class="fa">&#xf07a;</i></a></li>
                         <li class="rgt"><a href="Login.php">Log in</a></li> 
-                        <li class="rgt"><a href="Signup.php">Sign up</a></li>
-
-                                       
+                        <li class="rgt"><a href="Signup.php">Sign up</a></li>                  
                     </ul>
 
             </div>
@@ -79,15 +77,39 @@
                                <input type="submit" value="Moniter">
                            </form> 
                         </dd> 
+                        <dd>
+                            <a href="#"> TV </a>
+                        </dd>  
+                        <dd>
+                            <a href="#"> Phone </a>
+                        </dd>                                                  
+                    <dt>Electronic companies</dt>
+                    <dd>
+                        <a href="#"> Dell </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> ASUS </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Apple </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Sony </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Panasonic </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Microsoft </a>
+                    </dd> 
+
                 </dl>
             </div>
 
            
             <!-- PRODUCT LIST -->
             <div class="content">  
-                <div class="dropdown">CART
-                    <div class="dropdown-content"><?php include("subPage/product.php"); ?>"</div>
-                </div>
+                                     
                 <?php
                     $query = "SELECT * FROM product ORDER BY id ASC";
                     $result = mysqli_query($db, $query);

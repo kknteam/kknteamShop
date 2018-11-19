@@ -1,8 +1,25 @@
+/* bỏ gạch chân link */
+a
+{
+    text-decoration: none;
+}
+
+/* hình ảnh sản phẩm bên trái */
 .product-image-box
 {
-    float: left;
+    display: inline-block;
+    /* float: left; */
     border: 1px solid black;
     width: 300px;
+    height: 116px;
+    padding-top: 14px;
+    padding-bottom: 49px;
+}
+
+
+.describe-product span p
+{
+    font-weight: bold;
 }
 
 .slide_product_left img
@@ -10,11 +27,125 @@
     width: 150px;
     height: 100px;
 }
-
+/* giá tiền và các thứ khác bên phải */
 .product-price-box
 {
-    float: right;
+    display: inline-block;
     border: 1px solid black;
     width: 650px;
     padding-left: 30px;
+}
+/* nút đặt mua */
+
+.price 
+{
+    
+    width: 160px;
+    height: 30px;
+    font: 20px bold;
+    color: red;
+    padding-top: 5px;
+    padding-right: 1px;
+    padding-left: 5px;
+}
+.shipping-icon img
+{
+   
+    width: 32px;
+    height: 20px;
+    padding-left:5px;
+    padding-top: -30px;
+}
+.discount
+{
+    font: 10px;
+    font-style: italic;
+    color: black;
+    padding-top: 0px;
+    padding-right: 1px;
+    padding-left: 5px;
+}
+
+
+.quality-box
+{
+    height: 40px;
+    width: 40px;
+    text-align:center;
+    padding-top: 5px;
+    padding-right: 1px;
+    padding-left: 5px;
+}
+
+.quality span
+{
+    font: 30px;
+    margin-left: 40px;
+}
+
+.button-buy a
+{
+    float:left;
+    border: 1px solid black;
+    width: 65px;
+    height: 20px;
+    font: 12 px bold;
+    color:rgb(218, 4, 238);
+    margin-top: -12px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    margin-right: 1px;
+    text-align: left;
+}
+
+/* Mô tả sản phẩm */
+.describe-product
+{
+    display: inline-block;
+    /* float: left; */
+    width: 300px;
+    height: 150x;
+    border: 1px solid black;
+    clear: both;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 5px;
+    margin-top: 10px;
+}
+
+/* Thương hiệu, đánh giá, sản phẩm */
+.brand-rv-cmt
+{
+    display: inline-block;
+    
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+
+.brand-rv-cmt a
+{
+    color: burlywood;
+}
+
+.brand-rv-cmt ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.brand-rv-cmt li{
+    display: inline-block;
+    padding: 5px;
+}
+
+.brand-rv-cmt a:hover
+{
+    text-decoration: none;
+    background-color: #33FF66;
+    color:#999999;
 }

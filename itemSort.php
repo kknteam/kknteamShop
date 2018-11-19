@@ -44,39 +44,55 @@
             </div>
 
             <!-- MENU -->
-                        <div class="sidebar">
+            <div class="sidebar">
                 <dl>
                     <dt>Check out our product</dt>
                         <dd>
-                           <form action="itemSort.php?id=Lap" method="GET">
-                                <input type="hidden" name="item" value="Lap">
-                               <input type="submit" value="Laptop">
+                           <form action="subPage/itemSort.php?action=Sort&id=Lap" method="GET">
+                               Laptop
                            </form>
                         </dd>
                         <dd>
-                           <form action="itemSort.php?id=HP" method="GET">
-                                <input type="hidden" name="item" value="HP">
-                               <input type="submit" value="HeadPhone">
-                           </form>
+                            <a href="#"> Hardware </a>
                         </dd>
                         <dd>
-                           <form action="itemSort.php?id=KB" method="GET">
-                                <input type="hidden" name="item" value="KB">
-                               <input type="submit" value="Keyboard">
-                           </form>                        
-                       </dd>
-                        <dd>
-                            <form action="itemSort.php?id=KB" method="GET">
-                                <input type="hidden" name="item" value="Mse">
-                               <input type="submit" value="Mouse">
-                           </form> 
+                            <a href="#"> Headphone </a>
                         </dd>
                         <dd>
-                            <form action="itemSort.php?id=KB" method="GET">
-                                <input type="hidden" name="item" value="Moni">
-                               <input type="submit" value="Moniter">
-                           </form> 
+                            <a href="#"> Keyboard </a>
+                        </dd>
+                        <dd>
+                            <a href="#"> Mouse </a>
+                        </dd>
+                        <dd>
+                            <a href="#"> screen </a>
                         </dd> 
+                        <dd>
+                            <a href="#"> TV </a>
+                        </dd>  
+                        <dd>
+                            <a href="#"> Phone </a>
+                        </dd>                                                  
+                    <dt>Electronic companies</dt>
+                    <dd>
+                        <a href="#"> Dell </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> ASUS </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Apple </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Sony </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Panasonic </a>
+                    </dd>
+                    <dd>
+                        <a href="#"> Microsoft </a>
+                    </dd> 
+
                 </dl>
             </div>
 
@@ -96,7 +112,7 @@
                 <!-- '{' -->
                 <a href="Info.php">
                     <div class="box">
-                            <form method="post" action="index01.php?action=add&id=<?php echo $row["id"]; ?>">
+                            <form method="post" action="itemSort.php?action=add&id=<?php echo $row["id"]; ?>">
                                     <img src="img_product/<?php echo $row["img"];?>"/>
                                     
                                     <div class="name" ><?php echo $row["productname"]; ?></div>
