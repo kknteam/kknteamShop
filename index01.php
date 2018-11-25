@@ -10,14 +10,14 @@
                             {
                 ?>
                 <!-- '{' -->
-                <a href="Info.php">
+                <a href="index.php?a=info.php&i_id=<?php echo $row['id'];?>">
                     <div class="box">
                             <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
                                     <img src="img_product/<?php echo $row["img"];?>"/>
                                     
                                     <div class="name" ><?php echo $row["productname"]; ?></div>
 
-                                    <div class="price" ><?php echo $row["price"]; ?>đ</div>
+                                    <div class="price" ><?php  echo number_format($row['price'], 0); ?>đ</div>
 
                                     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>" />
 

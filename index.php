@@ -2,27 +2,41 @@
 <html>
     <head>
         <title>Electronic Supply Home Page</title>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="css/style_Main.css">
+        <link rel="stylesheet" type="text/css" href="css/style_info.css">
         <!-- W3S CSS icon lib -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body bgcolor="#CAC7C7">
         <div class="container">
 
-            <?php if(isset($_SESSION['username'])) : ?>
-                <p class="signin"> Welcome <strong><?php echo $_SESSION['username']; ?></strong> | <a href="login.php?logout='1'">Log out</a> </p>
-            <?php endif ?>  
-
+             <!-- USER BAR  -->
+             <?php include("user_bar.php"); ?>
+             
             <!-- HEAD -->
             <?php include("header.php"); ?>
 
             <!-- NAVIGATE -->
             <?php include("navigate.php"); ?>
 
-            <!-- MENU -->
-            <?php include("sidebar.php") ?>
+            <!-- MENU -->            
+            <?php 
+                if(isset($_GET['a']))
+                {
+                    if($_GET['a'] != "info.php")
+                    {
+                        include("sidebar.php"); 
+                    }
+                }
+                else
+                {
+                    include("sidebar.php"); 
+                }
+            ?>
 
            
             <!-- PRODUCT LIST -->
@@ -37,12 +51,12 @@
             			$a = $_GET['a'];
             		}
             	 include($a);
-            	  ?>        
+            	?>        
                 
                 
 
 
-            <div class="footer">Khang Ha</div>
+            <div class="footer">KKN SHOP</div>
         </div>
         <script type="text/javascript" src="js/script.js"></script>
     </body>

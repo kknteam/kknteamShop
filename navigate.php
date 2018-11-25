@@ -6,8 +6,8 @@
                         
                         <li style="color: #FC2121; background-color: #F9B3B3; float: right;"><?php include("subPage/numberCartItem.php");?></li>
                         <li id="rgt"><a href="checkout.php"><i style="font-size:20px" class="fa">&#xf07a;</i></a></li>
-                        <li id="rgt"><a href="Login.php">Log in</a></li> 
-                        <li id="rgt"><a href="Signup.php">Sign up</a></li>                  
+                        <li id="rgt"><a href="signup.php">Sign up</a></li>  
+                        <li id="rgt"><a href="login.php">Log in</a></li>                 
                     </ul>
 
 </div>

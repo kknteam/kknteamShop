@@ -5,7 +5,8 @@
                                      
                 <?php
                     $db = mysqli_connect('localhost','root','','mydb');
-                    $item = $_GET["id"];
+                    mysqli_set_charset($db,'utf8');
+                    $item = $_GET["pid"];
                     $item_check = "SELECT * FROM product WHERE id like '$item%'";
                     $result = mysqli_query($db, $item_check);
                         if(mysqli_num_rows($result) > 0)
@@ -14,9 +15,9 @@
                             {
                 ?>
                 <!-- '{' -->
-                <a href="Info.php">
+                <a href="index.php?a=info.php&i_id=<?php echo $row['id'];?>">
                     <div class="box">
-                            <form method="post" action="index01.php?action=add&id=<?php echo $row["id"]; ?>">
+                            <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>&a=ItemSort.php&pid=<?php echo $item; ?>">
                                     <img src="img_product/<?php echo $row["img"];?>"/>
                                     
                                     <div class="name" ><?php echo $row["productname"]; ?></div>

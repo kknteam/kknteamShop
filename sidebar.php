@@ -1,23 +1,21 @@
-<div class="sidebar">
-                <dl class="side-content">
-                    <dt>Check out our product</dt>
+              <div class="sidebar">
+                <dl>
+                  <dt>Check out our product</dt>
                         <dd>
-                          <a href="index.php?a=ItemSort.php&id=Lap">Laptop</a>
+                          <a href="index.php?a=ItemSort.php&pid=Lap">Laptop</a>
                         </dd>
                         <dd>
-                          <a href="index.php?a=ItemSort.php&id=HP">Headphone</a>
+                          <a href="index.php?a=ItemSort.php&pid=HP">Headphone</a>
                         </dd>
                         <dd>
-                          <a href="index.php?a=ItemSort.php&id=KB">Keyboard</a>
+                          <a href="index.php?a=ItemSort.php&pid=KB">Keyboard</a>
                         </dd>
                         <dd>
-                          <a href="index.php?a=ItemSort.php&id=Mse">Mouse</a>
+                          <a href="index.php?a=ItemSort.php&pid=Mse">Mouse</a>
                         </dd>
                         <dd>
-                          <a href="index.php?a=ItemSort.php&id=Moni">Monitor</a>
+                          <a href="index.php?a=ItemSort.php&pid=Moni">Monitor</a>
                         </dd>
-                       
-
                 </dl>
                 <hr>
                 <div class="dropdown">

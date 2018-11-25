@@ -7,6 +7,7 @@
 
 	//connect to database
 	$db = mysqli_connect('localhost','root','','mydb');
+	mysqli_set_charset($db,'utf8');
 	if (mysqli_connect_errno())
 	{
 	  	echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -124,12 +125,12 @@
 	{
 		if(isset($_SESSION['username']))
 		{
-			$quantity = 0;		
-			// KT session cart co duoc tao hay chu
+			$quantity = 1;		
+			// KT session cart co duoc tao hay chua
 			if(isset($_SESSION['cart']))
 			{
 				$item_array_id = array_column($_SESSION["cart"], "id");	//return 1 dong tu database voi id = $id
-				//FIND FROM DB
+				//Them moi
 				if(!in_array($_GET["id"], $item_array_id))	//Check if that id exists
 				{
 					$count = count($_SESSION['cart']); //Basically n in an array	
@@ -141,12 +142,18 @@
 					);
 					// Add element to array(array.push())
 					$_SESSION["cart"][$count] = $item_list;
-
 				}
-				// else
-				// {
-				// 	echo  "<script>alert('Item already added to cart');</script>";
-				// }
+				else
+				{
+					foreach ($_SESSION["cart"] as $key => $value) 
+					{				
+						if($value["id"] == $_GET["id"])
+						{
+							$value['quantity'] = $value['quantity'] + 1;
+							$_SESSION["cart"][$key] = $value;
+						}
+					}
+				}
 				
 			}
 			else
@@ -176,31 +183,19 @@
 	{
 		if($_GET["action"] == "delete")
 		{
+			$n = count($_SESSION["cart"]);
 			foreach ($_SESSION["cart"] as $key => $value) 
 			{
-
 				if($value["id"] == $_GET["id"])
 				{
-					unset($_SESSION["cart"][$key]);
-					echo '<script>alert("Item Removed")</script>';
-					echo '<script>window.location="checkout.php"</script>';
+					for($i = $key; $i < $n-1; $i++)
+					{
+						$_SESSION["cart"][$i] = $_SESSION["cart"][$i+1];
+					}
+					unset($_SESSION["cart"][$n-1]);
 				}
 			}
-		}
-		//ADD
-		if($_GET["action"] == "add")
-		{
-			foreach ($_SESSION["cart"] as $key => $value) 
-			{
-				
-				if($value["id"] == $_GET["id"])
-				{
-					$item = $_SESSION["cart"][$key];
-					$item['quantity'] = $item['quantity']+1;
-					$_SESSION["cart"][$key] = $item;
-				}
-			}
-		}
+		}	
 		//SORT ITEM AS PAGES
 
 		if($_GET["action"] == "Sort")
@@ -255,11 +250,22 @@
 			else{
 				unset($_SESSION['cart']);
 				echo '<script>alert("Your order(s) have been placed successfully");</script>';
-				echo '<script>window.location="index01.php"</script>';
+				echo '<script>window.location="index.php"</script>';
 
 			}
 
 		}
 
+	}
+
+	//CART SUBMIT
+	if(isset($_POST["cart_submit"]))
+	{
+			foreach ($_SESSION["cart"] as $key => $value) 
+			{				
+					$item = $_SESSION["cart"][$key];
+					$item['quantity'] = $value['quantity'];
+					$_SESSION["cart"][$key] = $item;
+			}
 	}
 ?>
